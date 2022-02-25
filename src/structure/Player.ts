@@ -82,6 +82,8 @@ export class Player extends PlayerRPG {
 
     profile.spliceFields(armorIndex, 2);
 
+    profile.spliceFields(7, 2); // remove pet and skill field
+
     profile.addField(currency, code(this.coins), true);
     profile.addField("Win", code(this.win), true);
     profile.addField("Hunt", code(this.hunt), true);
