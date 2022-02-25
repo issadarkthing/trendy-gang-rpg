@@ -13,8 +13,6 @@ import { ButtonHandler } from "@jiman24/discordjs-button";
 import { stripIndents } from "common-tags";
 import { Item } from "../structure/Item";
 import { Weapon } from "../structure/Weapon";
-import { Pet } from "../structure/Pet";
-import { Skill } from "../structure/Skill";
 import { MessageEmbed } from "../structure/MessageEmbed";
 import { Accessories } from "../structure/Accessories";
 
@@ -49,8 +47,6 @@ export default class extends Command {
       switch (arg1) {
         case "armor": items = Armor.all; break;
         case "weapon": items = Weapon.all; break;
-        case "pet": items = Pet.all; break;
-        case "skill": items = Skill.all; break;
         case "accessories": items = Accessories.all; break;
         default: items = null;
       }
@@ -102,8 +98,6 @@ export default class extends Command {
       **Categories**
       armor
       weapon
-      pet
-      skill
       accessories
       ------
       To open armor shop use command \`${prefix}${this.name} armor\`
