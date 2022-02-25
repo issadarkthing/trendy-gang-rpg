@@ -16,6 +16,7 @@ import { Weapon } from "../structure/Weapon";
 import { Pet } from "../structure/Pet";
 import { Skill } from "../structure/Skill";
 import { MessageEmbed } from "../structure/MessageEmbed";
+import { Accessories } from "../structure/Accessories";
 
 interface ItemLike {
   name: string;
@@ -50,6 +51,7 @@ export default class extends Command {
         case "weapon": items = Weapon.all; break;
         case "pet": items = Pet.all; break;
         case "skill": items = Skill.all; break;
+        case "accessories": items = Accessories.all; break;
         default: items = null;
       }
 
@@ -102,6 +104,7 @@ export default class extends Command {
       weapon
       pet
       skill
+      accessories
       ------
       To open armor shop use command \`${prefix}${this.name} armor\`
       `;
