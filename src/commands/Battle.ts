@@ -26,7 +26,6 @@ export default class extends Command {
       monster = Monster.all[x];
       position = x;
       player.currentMonster = x;
-      player.save();
     });
 
     await menu.run();
