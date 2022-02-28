@@ -13,14 +13,14 @@ export default class extends Command {
 
     const player = client.players.array()
       .sort((a, b) => b.xp - a.xp)
-      .map((x, i) => `${i + 1}. ${x.name} \`${x.xp}\``)
+      .map((x, i) => `${i + 1}. ${x.name} \`${x.level}\``)
       .slice(0, 10)
       .join("\n");
 
     const embed = new MessageEmbed(msg.author)
       .setColor("RANDOM")
       .setTitle("Leaderboard")
-      .setDescription(bold(`Name | XP\n`) + player);
+      .setDescription(bold(`Name | Level\n`) + player);
 
     msg.channel.send({ embeds: [embed] });
   }
